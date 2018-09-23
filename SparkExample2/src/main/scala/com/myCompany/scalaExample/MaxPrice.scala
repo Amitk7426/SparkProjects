@@ -1,9 +1,5 @@
 package com.myCompany.scalaExample
 
-/**
- * Hello world!
- *
- */
 import org.apache.spark.SparkContext._
 import org.apache.spark.{SparkConf,SparkContext}
 
@@ -17,6 +13,6 @@ object MaxPrice {
       .map(_.split(","))
       .map(rec => ((rec(0).split("-"))(0).toInt, rec(1).toFloat))
       .reduceByKey((a,b) => Math.max(a,b))
-      .saveAsTextFile(args(1))
+      .saveAsSequenceFile(args(1))
   }
 }
