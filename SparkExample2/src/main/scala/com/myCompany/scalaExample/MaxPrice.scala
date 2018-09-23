@@ -7,13 +7,11 @@ package com.myCompany.scalaExample
 import org.apache.spark.SparkContext._
 import org.apache.spark.{SparkConf,SparkContext}
 
-object App {
+object MaxPrice {
 
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("MaxPrice")
     val sc = new SparkContext(conf)
-
-    println( "Hello World!" )
 
     sc.textFile(args(0))
       .map(_.split(","))
