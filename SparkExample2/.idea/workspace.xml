@@ -13,68 +13,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1802">
-              <caret line="106" column="38" selection-start-line="106" selection-start-column="38" selection-end-line="106" selection-end-column="38" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MaxPrice.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/MaxPrice.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RDDtoDataframe.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDtoDataframe.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="36" selection-start-line="7" selection-end-line="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RunApplicationOnIntellij.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RunApplicationOnIntellij.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="101" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadJsonToDF.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
+      <file leaf-file-name="RDDToParquet.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-              <folding>
-                <element signature="e#37#86#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RDDToJSON.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToJSON.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RDDToParque.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParque.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="381">
-              <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
             </state>
           </provider>
         </entry>
@@ -96,6 +39,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToJSON.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParque.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala" />
       </list>
     </option>
   </component>
@@ -117,11 +61,6 @@
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
@@ -311,7 +250,7 @@
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.30673498" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.30673498" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -450,14 +389,17 @@
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToJSON.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParque.scala">
+    <entry file="file://$PROJECT_DIR$/output/parquet/part-r-00000-4710e7c7-d30c-4bd3-bc88-2c35ad680427.gz.parquet">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        <state relative-caret-position="442">
+          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
         </state>
       </provider>
     </entry>

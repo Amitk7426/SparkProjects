@@ -22,7 +22,7 @@ object RDDToParquet {
 
     textDF.show()
 
-    textDF.write.format("parquet").mode(SaveMode.Overwrite).save("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet")
+    textDF.write.format("parquet").mode(SaveMode.Overwrite).save("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet")
 
     sc.stop
   }
