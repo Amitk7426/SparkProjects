@@ -55,8 +55,8 @@
       <file leaf-file-name="KeyOperations.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="469">
-              <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+            <state relative-caret-position="466">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -187,7 +187,7 @@
     </option>
   </component>
   <component name="RunManager" selected="Application.KeyOperations">
-    <configuration name="KeyOperations" type="Application" factoryName="Application" temporary="true">
+    <configuration name="KeyOperations" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.KeyOperations" />
       <module name="SparkExample2" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -296,6 +296,7 @@
       <listeners />
     </configuration>
     <list>
+      <item itemvalue="Application.KeyOperations" />
       <item itemvalue="Application.MaxPrice" />
       <item itemvalue="Application.RDDtoDataframe" />
       <item itemvalue="Application.RunApplicationOnIntellij" />
@@ -306,13 +307,7 @@
       <item itemvalue="Application.ReadParquetToDF" />
       <item itemvalue="Application.ReadPartitionedParquetToDF" />
       <item itemvalue="Application.ReadParquetMergeSchemaToDF" />
-      <item itemvalue="Application.KeyOperations" />
     </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.KeyOperations" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -328,7 +323,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -344,7 +339,7 @@
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.30673498" />
+      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19912152" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -527,8 +522,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="469">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="466">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>

@@ -26,9 +26,9 @@ object KeyOperations {
 
     println("+++++++++++++CombineByKey++++++++++++++")
     val top5CateogriesOfIncidentsCombineByKey = inputRDD.map(_.split(",")).map(x=>(x(1),1))
-                                                .combineByKey((value=>(value+value)),
-                                                  ((intraPartitionAcc:Int,v)=>(intraPartitionAcc+v)),
-                                                  ((interPartitionAcc1:Int,interPartitionAcc2:Int)=>(interPartitionAcc1+interPartitionAcc2)))
+                                                .combineByKey(value => (value + value),
+                                                  (intraPartitionAcc: Int, v) => (intraPartitionAcc + v),
+                                                  (interPartitionAcc1: Int, interPartitionAcc2: Int) => (interPartitionAcc1 + interPartitionAcc2))
                                                   .takeOrdered(5)(Ordering[Int].reverse.on(x=>x._2))
 
     top5CateogriesOfIncidentsCombineByKey.foreach(println)
