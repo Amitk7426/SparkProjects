@@ -52,16 +52,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="KeyOperations.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="KeyOperations.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="141">
+              <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SortKeyOperation.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/SortKeyOperation.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Package Object" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -84,6 +100,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadPartitionedParquetToDF.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadParquetMergeSchemaToDF.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/SortKeyOperation.scala" />
       </list>
     </option>
   </component>
@@ -186,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KeyOperations">
+  <component name="RunManager" selected="Application.SortKeyOperation">
     <configuration name="KeyOperations" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.KeyOperations" />
       <module name="SparkExample2" />
@@ -254,6 +271,11 @@
       <module name="SparkExample2" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
+    <configuration name="SortKeyOperation" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.SortKeyOperation" />
+      <module name="SparkExample2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -297,6 +319,7 @@
     </configuration>
     <list>
       <item itemvalue="Application.KeyOperations" />
+      <item itemvalue="Application.SortKeyOperation" />
       <item itemvalue="Application.MaxPrice" />
       <item itemvalue="Application.RDDtoDataframe" />
       <item itemvalue="Application.RunApplicationOnIntellij" />
@@ -323,7 +346,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
@@ -339,7 +362,7 @@
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
-      <window_info active="true" content_ui="combo" id="Project" order="5" visible="true" weight="0.19912152" />
+      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.19912152" />
       <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="1" />
@@ -520,10 +543,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/package.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" selection-start-line="2" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="141">
+          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/SortKeyOperation.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="67" selection-start-line="19" selection-start-column="67" selection-end-line="19" selection-end-column="67" />
         </state>
       </provider>
     </entry>
