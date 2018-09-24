@@ -13,11 +13,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RDDToParquet.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RDDToParquet.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="398">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RDDToPartitionParquet.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToPartitionParquet.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="24" column="179" lean-forward="true" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="179" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadParquetToDF.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadParquetToDF.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadJsonToDF.scala" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+              <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+              <folding>
+                <element signature="e#37#86#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReadPartitionedParquetToDF.scala" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadPartitionedParquetToDF.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -40,10 +79,13 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToJSON.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParque.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToPartitionParquet.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadParquetToDF.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadPartitionedParquetToDF.scala" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -61,6 +103,24 @@
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="partition" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
+              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="partition" type="462c0819:PsiDirectoryNode" />
+              <item name="arquet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
@@ -120,6 +180,9 @@
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.myCompany.scalaExample" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Amit\Desktop\TestSpark\SparkExample2\src\main\scala\com\myCompany\scalaExample" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -133,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.RDDToParquet">
+  <component name="RunManager" selected="Application.ReadPartitionedParquetToDF">
     <configuration name="MaxPrice" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.MaxPrice" />
       <module name="SparkExample2" />
@@ -155,6 +218,11 @@
       <module name="SparkExample2" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
+    <configuration name="RDDToPartitionParquet" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.RDDToPartitionParquet" />
+      <module name="SparkExample2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
     <configuration name="RDDtoDataframe" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.RDDtoDataframe" />
       <module name="SparkExample2" />
@@ -162,6 +230,16 @@
     </configuration>
     <configuration name="ReadJsonToDF" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.ReadJsonToDF" />
+      <module name="SparkExample2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ReadParquetToDF" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.ReadParquetToDF" />
+      <module name="SparkExample2" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="ReadPartitionedParquetToDF" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.ReadPartitionedParquetToDF" />
       <module name="SparkExample2" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
     </configuration>
@@ -218,6 +296,9 @@
       <item itemvalue="Application.ReadJsonToDF" />
       <item itemvalue="Application.RDDToJSON" />
       <item itemvalue="Application.RDDToParquet" />
+      <item itemvalue="Application.RDDToPartitionParquet" />
+      <item itemvalue="Application.ReadParquetToDF" />
+      <item itemvalue="Application.ReadPartitionedParquetToDF" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -246,7 +327,7 @@
       <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.50073206" side_tool="true" weight="0.32857144" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="2" show_stripe_button="false" sideWeight="0.49926794" weight="0.32857144" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.7031746" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.7952381" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="0" />
@@ -349,16 +430,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
-          <folding>
-            <element signature="e#37#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/MaxPrice.scala">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -398,8 +469,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadParquetToDF.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="27" column="3" lean-forward="true" selection-start-line="27" selection-start-column="3" selection-end-line="27" selection-end-column="3" />
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+          <folding>
+            <element signature="e#37#86#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToPartitionParquet.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="24" column="179" lean-forward="true" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="179" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadPartitionedParquetToDF.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
         </state>
       </provider>
     </entry>
