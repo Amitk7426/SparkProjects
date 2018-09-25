@@ -13,68 +13,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RDDToParquet.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RDDToPartitionParquet.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToPartitionParquet.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="24" column="179" selection-start-line="24" selection-start-column="84" selection-end-line="24" selection-end-column="179" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadParquetToDF.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadParquetToDF.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReadJsonToDF.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ReadJsonToDF.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="94" />
+            <state relative-caret-position="425">
+              <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
               <folding>
                 <element signature="e#37#86#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KeyOperations.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SortKeyOperation.scala" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/SortKeyOperation.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapPartitionsOperation.scala" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/MapPartitionsOperation.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
             </state>
           </provider>
         </entry>
@@ -100,7 +46,6 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDtoDataframe.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RunApplicationOnIntellij.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToRDD.scala" />
-        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToJSON.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParque.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/RDDToParquet.scala" />
@@ -111,6 +56,7 @@
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/SortKeyOperation.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/MapPartitionsOperation.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala" />
       </list>
     </option>
   </component>
@@ -132,11 +78,6 @@
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
               <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SparkExample2" type="462c0819:PsiDirectoryNode" />
-              <item name="input" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SparkExample2" type="b2602c69:ProjectViewProjectNode" />
@@ -213,7 +154,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MapPartitionsOperation">
+  <component name="RunManager" selected="Application.ReadJsonToDF">
     <configuration name="KeyOperations" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.myCompany.scalaExample.KeyOperations" />
       <module name="SparkExample2" />
@@ -378,7 +319,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info active="true" anchor="bottom" id="Messages" order="3" visible="true" weight="0.32857144" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32857144" />
       <window_info anchor="right" id="Palette&#9;" order="1" />
       <window_info id="Image Layers" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="0" />
@@ -723,16 +664,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="94" />
-          <folding>
-            <element signature="e#37#86#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/package.scala" />
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/KeyOperations.scala">
       <provider selected="true" editor-type-id="text-editor">
@@ -750,8 +681,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/MapPartitionsOperation.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="7" column="65" selection-start-line="7" selection-start-column="65" selection-end-line="7" selection-end-column="65" />
+        <state relative-caret-position="378">
+          <caret line="47" column="7" lean-forward="true" selection-start-line="47" selection-start-column="7" selection-end-line="47" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/com/myCompany/scalaExample/ReadJsonToDF.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="4" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding>
+            <element signature="e#37#86#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

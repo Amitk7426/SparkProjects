@@ -22,6 +22,8 @@ object ReadJsonToDF {
 
     data.show()
 
+    df.rdd.foreach(x=> println(x))
+    
     sc.stop
   }
 }
