@@ -12,10 +12,15 @@ object ReadParquetToDF {
 
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
-    val textDF = sqlContext.read.format("parquet").load("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet")
+    val textFormatDF = sqlContext.read.format("parquet").load("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet")
+    textFormatDF.show()
 
+    val textDF = sqlContext.read.parquet("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet")
     textDF.show()
 
+    val df = sqlContext.sql("SELECT * FROM parquet. `C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet`")
+
+    df.show()
     sc.stop
   }
 }

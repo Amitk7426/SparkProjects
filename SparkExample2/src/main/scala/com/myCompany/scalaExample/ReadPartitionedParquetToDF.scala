@@ -15,6 +15,5 @@ object ReadPartitionedParquetToDF {
 
     textDF.show()
 
-    sc.stop
   }
 }
