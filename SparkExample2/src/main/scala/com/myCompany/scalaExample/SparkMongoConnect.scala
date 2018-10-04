@@ -1,3 +1,5 @@
+package com.myCompany.scalaExample
+
 import com.mongodb.spark._
 import com.mongodb.spark.config.ReadConfig
 import org.apache.spark.sql.SQLContext
@@ -5,31 +7,32 @@ import org.apache.spark.sql.functions.{max, min}
 import org.apache.spark.{SparkConf, SparkContext}
 import org.bson.Document
 
-object SparkMongoMain extends App {
+object SparkMongoConnect extends App {
 
   val conf = new SparkConf()
-    .setAppName("SparkMongoMain")
+    .setAppName("SparkMongoConnect")
     .setMaster("local[1]")
 
   val sc = new SparkContext(conf)
 
-  /* mongodb://127.0.0.1/IO.postcomments
+  /* mongodb://127.0.0.1/testMongodb.movie
   lost name : 127.0.0.1/
   *  Database : IO
   *  Table/Collection : postcomments */
-  val readConfig = ReadConfig(Map("uri" -> "mongodb://127.0.0.1/IO.postcomments")) // 1)
+  val readConfig = ReadConfig(Map("uri" -> "mongodb://127.0.0.1/testMongodb.movie")) // 1)
   val zipDf = sc.loadFromMongoDB(readConfig).toDF() // 2)
 
   zipDf.printSchema() // 3)
   zipDf.show()
 
-  var minMaxCities = zipDf
+  var name = zipDf
   
   // Writing data in MongoDB:
+  // Version greater than or equal to MongoDB 3.2 will be only supported
   MongoSpark
-    .write(minMaxCities)
-    .option("spark.mongodb.output.uri", "mongodb://127.0.0.1/IO" )
-    .option("collection","newpostcomments")
+    .write(name)
+    .option("spark.mongodb.output.uri", "mongodb://127.0.0.1/testMongodb" )
+    .option("collection","movieTest")
     .mode("overwrite")
     .save()
 }
