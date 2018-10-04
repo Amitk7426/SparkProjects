@@ -16,10 +16,12 @@ object SparkMongoConnect extends App {
   val sc = new SparkContext(conf)
 
   /* mongodb://127.0.0.1/testMongodb.movie
-  lost name : 127.0.0.1/
+  *  host name : 127.0.0.1/
   *  Database : IO
   *  Table/Collection : postcomments */
-  val readConfig = ReadConfig(Map("uri" -> "mongodb://127.0.0.1/testMongodb.movie")) // 1)
+  // Additional approach for mongo connection
+  //val readConfig = ReadConfig(Map("uri" -> "mongodb://127.0.0.1/testMongodb.movie")) // 1)
+  val readConfig = ReadConfig(Map("uri" -> "mongodb://127.0.0.1/", "database" -> "testMongodb", "collection" -> "movie")) // 1)
   val zipDf = sc.loadFromMongoDB(readConfig).toDF() // 2)
 
   zipDf.printSchema() // 3)
