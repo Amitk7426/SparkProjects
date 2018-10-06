@@ -7,10 +7,10 @@ object RDDToJSON {
   case class textCase(date: String, A: Float, B:Float, C:Float, D:Float, E:Long, F:Float)
 
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("MaxPrice").setMaster("local[1]")
+    val conf = new SparkConf().setAppName("RDDToJSON").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
-    val textRDD = sc.textFile("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\input\\table.csv",1)
+    val textRDD = sc.textFile("./input/table.csv",1)
 
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
@@ -22,7 +22,7 @@ object RDDToJSON {
 
     textDF.show()
 
-    textDF.write.format("json").mode(SaveMode.Overwrite).save("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\json")
+    textDF.write.format("json").mode(SaveMode.Overwrite).save("./output/json")
 
     sc.stop
   }

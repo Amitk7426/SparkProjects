@@ -10,7 +10,7 @@ object RDDToParquet {
     val conf = new SparkConf().setAppName("RDDToParque").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
-    val textRDD = sc.textFile("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\input\\table.csv",1)
+    val textRDD = sc.textFile("./input/table.csv",1)
 
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
 
@@ -22,9 +22,9 @@ object RDDToParquet {
 
     textDF.show()
 
-    textDF.write.format("parquet").mode(SaveMode.Overwrite).save("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\userFormat.parquet")
+    textDF.write.format("parquet").mode(SaveMode.Overwrite).save("./output/parquet/userFormat.parquet")
 
-    textDF.write.parquet("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\output\\parquet\\user.parquet")
+    textDF.write.parquet("./output/parquet/user.parquet")
 
     sc.stop
   }

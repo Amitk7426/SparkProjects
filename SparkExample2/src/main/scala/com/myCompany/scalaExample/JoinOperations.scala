@@ -6,7 +6,7 @@ import org.apache.spark.{SparkConf, SparkContext}
 object JoinOperations {
 
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("MaxPrice").setMaster("local[1]")
+    val conf = new SparkConf().setAppName("JoinOperations").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
     val emp = sc.parallelize(Seq(("jordan",10), ("ricky",20), ("matt",30), ("mince",35), ("rhonda",30)))

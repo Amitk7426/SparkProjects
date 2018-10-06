@@ -7,12 +7,12 @@ import org.apache.spark.sql._
 object ReadJsonToDF {
 
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("MaxPrice").setMaster("local[1]")
+    val conf = new SparkConf().setAppName("ReadJsonToDF").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
     val sqlContext = new SQLContext(sc)
 
-    val df = sqlContext.read.json("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\input\\multilinecolors.json")
+    val df = sqlContext.read.json("./input/multilinecolors.json")
 
     df.printSchema()
 

@@ -5,10 +5,10 @@ import org.apache.spark.{SparkConf, SparkContext}
 object SortKeyOperation {
 
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("KeyOperations").setMaster("local[1]")
+    val conf = new SparkConf().setAppName("SortKeyOperation").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
-    val inputRDD = sc.textFile("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\input\\uber")
+    val inputRDD = sc.textFile("./input/uber")
     val header = inputRDD.first()
     val format = new java.text.SimpleDateFormat("MM/dd/yyyy")
     val days =Array("Sun","Mon","Tue","Wed","Thu","Fri","Sat")

@@ -8,7 +8,7 @@ object KeyOperations {
     val conf = new SparkConf().setAppName("KeyOperations").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
-    val inputRDD = sc.textFile("C:\\Users\\Amit\\Desktop\\TestSpark\\SparkExample2\\input\\Police_Department_Incidents.csv")
+    val inputRDD = sc.textFile("./input/Police_Department_Incidents.csv")
 
     println("++++++++++++ReduceByKey+++++++++++++++")
     val top5CateogriesOfIncidentsReduceByKey = inputRDD.map(_.split(","))

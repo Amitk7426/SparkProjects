@@ -6,7 +6,7 @@ object ReadParquetMergeSchemaToDF {
   case class textCase(date: String, A: Float, B:Float, C:Float, D:Float, E:Long, F:Float)
 
   def main(args: Array[String]) {
-    val conf = new SparkConf().setAppName("RDDToParque").setMaster("local[1]")
+    val conf = new SparkConf().setAppName("ReadParquetMergeSchemaToDF").setMaster("local[1]")
     val sc = new SparkContext(conf)
 
     val sqlContext = new org.apache.spark.sql.SQLContext(sc)
