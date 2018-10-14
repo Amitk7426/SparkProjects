@@ -15,5 +15,17 @@ object ReadPartitionedParquetToDF {
 
     textDF.show()
 
+    val textDFDatePaceholder = sqlContext.read.format("parquet").load("./input/parquet/partition/date=2004-01-*")
+
+    textDFDatePaceholder.show()
+
+    val textDFMonthPaceholder = sqlContext.read.format("parquet").load("./input/parquet/partition/date=2004-*-03")
+
+    textDFMonthPaceholder.show()
+
+    val textDFYearPaceholder = sqlContext.read.format("parquet").load("./input/parquet/partition/date=*-01-03")
+
+    textDFYearPaceholder.show()
+
   }
 }

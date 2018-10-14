@@ -22,6 +22,11 @@ object ReadJsonToDF {
 
     data.show()
 
+    sqlContext.sql("select * from JSONdata where color = 'blue'").show()
+
+    //for testing
+    //df.write.saveAsTable("JSONdata")
+
     df.rdd.foreach(x=> println(x))
 
     sc.stop

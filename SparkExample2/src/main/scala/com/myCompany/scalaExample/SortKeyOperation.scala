@@ -17,7 +17,7 @@ object SortKeyOperation {
     val combines = split.map(x => (x._1+" "+days(x._2.getDay),x._3.toInt))
     combines.reduceByKey(_+_).map(item => item.swap).sortByKey(false).collect.foreach(println)
 
-    println("""++++++++++++++++++++++++++++++++++++++++++++++++++++++""")
+    println("""+++++++++++++++++++++++true = accending+++++++++++++++++++++++++++++++""")
     combines.reduceByKey(_+_).map(item => item.swap).sortByKey(true).collect.foreach(println)
 
     //for practice
