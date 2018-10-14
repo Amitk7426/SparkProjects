@@ -1,3 +1,6 @@
 SparkExample2/output/
+SparkExample2/.idea/
+SparkExample2/target/
 
 *.class
+*.log
