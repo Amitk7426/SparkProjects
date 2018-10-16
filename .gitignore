@@ -9,5 +9,7 @@ SparkWorkspace/.metadata
 SparkWorkspace/.recommenders
 SparkWorkspace/SparkJavaExamples/target/
 
+SparkWorkspace/SparkJavaExamples/metastore_db/
+
 *.class
 *.log
