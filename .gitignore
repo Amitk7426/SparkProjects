@@ -4,10 +4,10 @@ SparkExample2/target/
 
 
 SparkWorkspace/RemoteSystemsTempFiles/
-SparkWorkspace/output/
+SparkWorkspace/SparkJavaExamples/output/
 SparkWorkspace/.metadata
 SparkWorkspace/.recommenders
-
+SparkWorkspace/SparkJavaExamples/target/
 
 *.class
 *.log
