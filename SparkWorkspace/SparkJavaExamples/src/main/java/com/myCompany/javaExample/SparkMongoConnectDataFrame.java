@@ -16,6 +16,7 @@ import org.bson.Document;
 import com.mongodb.spark.MongoSpark;
 import com.mongodb.spark.config.ReadConfig;
 import com.mongodb.spark.config.WriteConfig;
+import com.mongodb.spark.rdd.api.java.JavaMongoRDD;
 import com.myCompany.javaExample.Utils.Characters;
 
 public class SparkMongoConnectDataFrame {
@@ -82,5 +83,12 @@ public class SparkMongoConnectDataFrame {
 		
 		MongoSpark.load(sqlContext, ReadConfig.create(sqlContext).withOption("collection", "hundredClub"), Characters.class).show();
 
+		JavaMongoRDD<Document> javaMongoRDD = MongoSpark.load(jsc, ReadConfig.create(sqlContext).withOption("collection", "hundredClub"));
+		
+		JavaMongoRDD<Document> aggregatedRdd = javaMongoRDD.withPipeline(Arrays.asList(
+												Document.parse("{ $match: { age : { $gt : 100 } } }")
+												, Document.parse("{ $match: { age : { $lt : 170 } } }")
+												));
+		aggregatedRdd.toDF().show();
 	}
 }
