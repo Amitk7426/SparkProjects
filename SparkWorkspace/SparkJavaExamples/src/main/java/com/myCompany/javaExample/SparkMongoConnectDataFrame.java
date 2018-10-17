@@ -78,7 +78,6 @@ public class SparkMongoConnectDataFrame {
 		explicitDF.registerTempTable("characters");
 		DataFrame centenarians = sqlContext.sql("SELECT name, age FROM characters");
 		
-		System.out.println(centenarians.first().toString());
 		MongoSpark.write(centenarians).option("collection", "hundredClub").mode("overwrite").save();
 		
 		MongoSpark.load(sqlContext, ReadConfig.create(sqlContext).withOption("collection", "hundredClub"), Characters.class).show();
