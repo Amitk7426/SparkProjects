@@ -1,4 +1,4 @@
-package com.myCompany.javaExample.DataFrame;
+package com.myCompany.javaExample.SparkDataFrameOperations;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,12 +18,11 @@ import org.bson.Document;
 
 import com.google.gson.Gson;
 import com.mongodb.spark.MongoSpark;
-import com.myCompany.javaExample.Utils.CustomerPayment;
 import com.myCompany.javaExample.Utils.PaymentType;
 import com.myCompany.javaExample.Utils.ProductType;
 import com.myCompany.javaExample.Utils.TestSales;
 
-public class SparkToDataframeSaleAnalysisV2 {
+public class SparkToDataframeSaleAnalysis {
 
 	@SuppressWarnings("serial")
 	public static void main(String[] args) {
@@ -32,7 +31,7 @@ public class SparkToDataframeSaleAnalysisV2 {
 		
 		sparkConf.set("spark.mongodb.output.uri", "mongodb://127.0.0.1/");
 		sparkConf.set("spark.mongodb.output.database", "testMongodb");
-		sparkConf.set("spark.mongodb.output.collection", "customerPayment");
+		sparkConf.set("spark.mongodb.output.collection", "testSales");
 		sparkConf.set("spark.mongodb.output.writeConcern.w", "majority");
 		
 		JavaSparkContext jsc = new JavaSparkContext(sparkConf);
@@ -42,65 +41,8 @@ public class SparkToDataframeSaleAnalysisV2 {
 		// Load a text file and convert each line to a JavaBean.
 		JavaRDD<String> transactionRDD = jsc.textFile("./input/SalesJan2009.csv");
 
-		JavaRDD<String> accountRDD = jsc.textFile("./input/SalesJan2009Account.csv");
-		
-		DataFrame transactionDataFrame = getDataFrame(sqlContext, transactionRDD);
-		
-		DataFrame accountDataFrame = getDataFrame(sqlContext, accountRDD);
-		
-		// Register the DataFrame as a table.
-		transactionDataFrame.registerTempTable("transaction");
-		
-		accountDataFrame.registerTempTable("account");
-
-		// SQL can be run over RDDs that have been registered as tables.
-		/*DataFrame results = sqlContext.sql("SELECT `Account Number` FROM account "
-											+ "Group by `Account Number` "  
-											+ "Having COUNT(*) > 1 ");*/
-
-		DataFrame results = sqlContext.sql("SELECT * FROM account");
-		
-		DataFrame results2 = sqlContext.sql("SELECT Name, Product, Payment_Type, sum(Price) as total_price "
-										+ "FROM transaction "
-										+ "Group by Name, Product, Payment_Type");
-		
-		/*DataFrame joinResults = transactionDataFrame.join(accountDataFrame, transactionDataFrame.col("Name").equalTo(
-				accountDataFrame.col("Name"))).drop(accountDataFrame.col("Name"));*/
-		
-		DataFrame joinResults = (transactionDataFrame.as("A")).join(accountDataFrame.withColumnRenamed("Name", "NameN").as("B"))
-								.where("A.Name = B.NameN").drop("NameN");
-		
-		
-		DataFrame joinResultsNew = joinResults.withColumn("Price", joinResults.col("Price").cast(DataTypes.IntegerType));
-		
-		DataFrame joinResultsNew2 =joinResultsNew.groupBy("Name", "Account Number").sum("Price");
-		
-		//joinResultsNew2.withColumn("Total", joinResultsNew2.col("sum(Price)")).show();
-		
-		DataFrame customerPaymentSummaryDF = joinResultsNew2.withColumn("Total", joinResultsNew2.col("sum(Price)")).drop("sum(Price)");
-
-		List<CustomerPayment> customerPaymentList = new ArrayList<>();
-
-		customerPaymentSummaryDF.collectAsList().forEach(x-> {
-			CustomerPayment customerPayment = new CustomerPayment();
-			customerPayment.setCustomerName(x.getString(0));
-			customerPayment.setAccountNumber(x.getString(1));
-			customerPayment.setTotal(Long.toString(x.getLong(2)));
-			customerPaymentList.add(customerPayment);
-		});
-		JavaRDD<Document> sparkDocuments = jsc.parallelize(customerPaymentList).map(new Function<CustomerPayment, Document>() {
-		    public Document call(final CustomerPayment customerPayment) throws Exception {
-		    	Gson gson = new Gson();
-		        return Document.parse(gson.toJson(customerPayment));
-		    }
-		});
-		
-		MongoSpark.save(sparkDocuments);
-	}
-
-	private static DataFrame getDataFrame(SQLContext sqlContext, JavaRDD<String> inputRDD) {
 		// The schema is encoded in a string
-		String headerString = inputRDD.first();
+		String headerString = transactionRDD.first();
 		
 		// Generate the schema based on the string of schema
 		List<StructField> fields = new ArrayList<StructField>();
@@ -112,7 +54,7 @@ public class SparkToDataframeSaleAnalysisV2 {
 		StructType schema = DataTypes.createStructType(fields);
 
 		// Convert records of the RDD (transactionRDD) to Rows.
-		JavaRDD<String> rowRDDFiltured = inputRDD.filter(row -> !row.equals(headerString));
+		JavaRDD<String> rowRDDFiltured = transactionRDD.filter(row -> !row.equals(headerString));
 
 		JavaRDD<Row> rowRDD = rowRDDFiltured.map(new Function<String, Row>() {
 			public Row call(String record) throws Exception {
@@ -131,7 +73,37 @@ public class SparkToDataframeSaleAnalysisV2 {
 		});
 
 		// Apply the schema to the RDD.
-		return sqlContext.createDataFrame(rowRDD, schema);
+		DataFrame transactionDataFrame = sqlContext.createDataFrame(rowRDD, schema);
+		
+		// Register the DataFrame as a table.
+		transactionDataFrame.registerTempTable("transaction");
+
+		// SQL can be run over RDDs that have been registered as tables.
+		DataFrame results = sqlContext.sql("SELECT * FROM transaction");
+
+		DataFrame results2 = sqlContext.sql("SELECT Name, Product, Payment_Type, sum(Price) as total_price "
+										+ "FROM transaction "
+										+ "Group by Name, Product, Payment_Type");
+		
+		DataFrame results3 = sqlContext.sql("SELECT Payment_Type, sum(Price) as total_price "
+				+ "FROM transaction "
+				+ "Group by Payment_Type");
+		
+		DataFrame results4 = sqlContext.sql("SELECT Product, sum(Price) as total_price "
+				+ "FROM transaction "
+				+ "Group by Product");
+
+		
+		List<TestSales> testSalesList = getTestSalesList(results3, results4);
+		
+		JavaRDD<Document> sparkDocuments = jsc.parallelize(testSalesList).map(new Function<TestSales, Document>() {
+		    public Document call(final TestSales testSales) throws Exception {
+		    	Gson gson = new Gson();
+		        return Document.parse(gson.toJson(testSales));
+		    }
+		});
+		
+		MongoSpark.save(sparkDocuments);
 	}
 
 	private static List<TestSales> getTestSalesList(DataFrame results3, DataFrame results4) {

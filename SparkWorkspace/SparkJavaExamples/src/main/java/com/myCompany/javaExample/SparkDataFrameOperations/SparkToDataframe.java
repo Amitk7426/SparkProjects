@@ -1,4 +1,4 @@
-package com.myCompany.javaExample.DataFrame;
+package com.myCompany.javaExample.SparkDataFrameOperations;
 
 import java.util.ArrayList;
 import java.util.List;
