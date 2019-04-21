@@ -6,6 +6,8 @@ object SortKeyOperation {
 
   def main(args: Array[String]) {
     val conf = new SparkConf().setAppName("SortKeyOperation").setMaster("local[1]")
+    conf.set( "spark.serializer", "org.apache.spark.serializer.KryoSerializer" )
+
     val sc = new SparkContext(conf)
 
     val inputRDD = sc.textFile("./input/uber")
